@@ -35,5 +35,5 @@ This Jupyter Notebook creates the Game, TeamStats, and PlayerStats tables as sho
 
 4. Create_NBA_training_data.ipynb
 
-This Jupyter Notebook creates training data based on different variables described above and saves the resulting data frames into the train_data folder.
+This Jupyter Notebook creates training data based on the five variables listed above and saves the resulting data frames into the train_data folder.
 
