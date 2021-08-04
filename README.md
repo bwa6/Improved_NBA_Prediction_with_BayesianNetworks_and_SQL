@@ -1,7 +1,7 @@
 # Improved_NBA_Prediction_with_BayesianNetworks_and_SQL
 Pipeline for predicting player statistics in a game using Bayesian NNs with data stored in a SQL database
 
-In this project, I am improving upon my previous NBA prediction model.  In this version, I input the data into an SQL database.  I createed scripts to manipulate data into a training set with the ability to tune how the training set is established.  Variables include:
+In this project, I am improving upon my previous NBA prediction model.  In this version, I scraped data from basketball reference and ESPN into an SQL database.  I createed scripts to manipulate data into a training set with the ability to tune how the training set is established.  Variables include:
 
 1. Whether to include playoff games
 2. How many minutes a player has to average per game to be included (generally only interested in making predictions for key players)
