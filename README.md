@@ -18,3 +18,22 @@ I also considered features based on start time, such as 7:30 or 10:30 pm, and da
 In my previous project, I considered features based on season averages and recent performance.  However, I decided to get rid of season averages since it would have a different effect depending on whether the game is early or late in the season since season averages would be more accurate later in the season.  Therefore, I will only consider recent performance, which will have a consistent impact regardless of the part of the season.
 
 In my previous project, I also considered the absolute stats of the opposing team.  In this project, I decided to incorporate the team's previous opponents' performances by taking the difference in the stats by the current opponents and the average stats of the opponents the team has played recently.  By utilizing this difference, we can compare the quality of the current opponent to recent opponents.  For example, if the team played low quality teams, a player's recent stats may look inflated.  If the model recognizes that the current opponent is much better than the previous, it may decide to make lower predictions than the player's previous performance would otherwise suggest.
+
+FILES:
+
+1. database_schematic3.png
+
+This is an image of the schema for the SQL database of data scraped from the web.  Primary keys are highlighted in red.
+
+2. Create_initial_NBA_db_Player_Season_Salary_Team.ipynb
+
+This Jupyter Notebook creates the Player, Season, Salary, and Team tables as shown in the database schematic.  
+
+3. Create_initial_NBA_db_Game_TeamStats_PlayerStats.ipynb
+
+This Jupyter Notebook creates the Game, TeamStats, and PlayerStats tables as shown in the database schematic.  
+
+4. Create_NBA_training_data.ipynb
+
+This Jupyter Notebook creates training data based on different variables described above and saves the resulting data frames into the training data folder.
+
