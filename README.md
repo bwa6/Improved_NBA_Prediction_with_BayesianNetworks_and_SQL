@@ -47,3 +47,11 @@ This Jupyter Notebook creates training data based on the five variables listed a
 
 This Jupyter Notebook develops a deep learning model where the output is a distribution object.  The advantage of this is the ability to model the uncertainty in the predictions.  A high standard deviation of the distribution object would mean high uncertainty.  This is valuable information when deciding how much to wager on a particular bet.  I have preliminary results at the end of the Notebook demonstrating performance on the 2021 playoffs.
 
+6. n_seasons5avgGames.... 
+
+CSV files starting with this name represent potential training data for a model.  These files are created using Create_NBA_training_data.ipynb. Each file has a different set of parameters, such as how many games to average to get a player's recent performance, whether to include playoff games, etc.
+
+7. test_n_seasons5avgGames.... 
+
+CSV files starting with this name represent test sets with over/under lines set by a betting website to test the ability of the model to make money by winning bets.
+
