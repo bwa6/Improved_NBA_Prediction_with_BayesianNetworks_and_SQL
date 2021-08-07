@@ -55,3 +55,6 @@ CSV files starting with this name represent potential training data for a model.
 
 CSV files starting with this name represent test sets with over/under lines set by a betting website to test the ability of the model to make money by winning bets.
 
+8. NBA_Fantasy_db.sqlite 
+
+This file is not included because it is surpasses Github's memory limitation.  However, you can create this yourself using the code provided.
