@@ -19,9 +19,15 @@ In my previous project, I considered features based on season averages and recen
 
 In my previous project, I also considered the absolute stats of the opposing team.  In this project, I decided to incorporate the team's previous opponents' performances by taking the difference in the stats by the current opponents and the average stats of the opponents the team has played recently.  By utilizing this difference, we can compare the quality of the current opponent to recent opponents.  For example, if the team played low quality teams, a player's recent stats may look inflated.  If the model recognizes that the current opponent is much better than the previous, it may decide to make lower predictions than the player's previous performance would otherwise suggest.
 
+In my previous project, I made predictions using a voting regressor that combined the results of a random forest, support vector machine, and lasso/ridge regression.  In this project, I developed a probabilistic neural network.  The advantage of this is the output is not just a single prediction but a normal distribution.  The prediction would be the mean and the uncertainty is the standard deviation.  As a result, I can sample from this distribution to determine how to wager on a bet of interest.  For each prediction, I sampled from the distribution object 1000 times and compared how many of these were over vs. under the over/under line set by the betting website.  The percent of samples over/under the line represents the predicted probability of winning the bet.  I use this probability in the arbitrary formula to determine how much to bet, which I established in my previous project. 
+
+I continue to improve this project so that it will be ready for making predictions on the 2022 regular season.  However, I have gotten some preliminary results using the over/under data from the 2021 playoffs that I collected during my previous project. The results can be viewed in the NBA_ProbabilisticNN_model.ipynb file.  Unfortunately, I lost money whereas I made a profit using my original model.  However, this is not too concerning since I think it is inappropriate to make predictions on the playoffs since the bulk of the training data is regular season data.  It will be more informative to test the validity of the model when I start to get over/under data on the 2022 regular season.
+
+I will continue to tinker with this model and test the effect of different features to get the most accurate model for betting on the 2022 regular season. Stay tuned for updates on this project.
+
 FILES:
 
-1. database_schematic3.png
+1. database_schematic4.png
 
 This is an image of the schema for the SQL database of data scraped from the web.  Primary keys are highlighted in red.
 
@@ -36,4 +42,8 @@ This Jupyter Notebook creates the Game, TeamStats, and PlayerStats tables as sho
 4. Create_NBA_training_data.ipynb
 
 This Jupyter Notebook creates training data based on the five variables listed above and saves the resulting data frames into the train_data folder.
+
+5. NBA_ProbabilisticNN_model.ipynb
+
+This Jupyter Notebook develops a deep learning model where the output is a distribution object.  The advantage of this is the ability to model the uncertainty in the predictions.  A high standard deviation of the distribution object would mean high uncertainty.  This is valuable information when deciding how much to wager on a particular bet.  I have preliminary results at the end of the Notebook demonstrating performance on the 2021 playoffs.
 
